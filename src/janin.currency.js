@@ -73,5 +73,5 @@ janin.currency = {
 
 janin.currencies = [    
     //                              name, networkVersion, privateKeyPrefix, WIF_Start, CWIF_Start, donate
-    janin.currency.createCurrency ("CryptoCashBack",           0x3F, 0xD4, "5",    "[LK]" , "SZJxXkgJJJF2oqzF6kkP3c8n7YV4RnA3ag")
+    janin.currency.createCurrency ("CryptoCashBack",           0x3F, 0xD4, "8",    "[LK]" , "SZJxXkgJJJF2oqzF6kkP3c8n7YV4RnA3ag")
                    ];
