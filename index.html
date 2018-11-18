@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="Universal Open Source Client-Side Paper Wallet Generator for CryptoCashBacks and other cryptocurrencies. Create your own paper wallet in a few easy steps : Generate, Print and Fold !">
+  <meta name="description" content="Universal Open Source Client-Side Paper Wallet Generator for CryptoCashBack. Create your own paper wallet in a few easy steps : Generate, Print and Fold !">
   <meta name="keywords" content="universal, paper, wallet, generator, cryptocurrencies, cryptocashback" />
   <link rel="icon" href="favicon.ico" type="image/x-icon"/>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
@@ -26,7 +26,7 @@ window.SecureRandom   BSD License
 window.EllipticCurve  BSD License
 window.BigInteger     BSD License
 window.QRCode         MIT License
-window.CryptoCashBack        MIT License
+window.Bitcoin        MIT License
 jsqrcode              Apache License, 2.0
 
 
@@ -52,63 +52,63 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
   GitHub Repository: https://github.com/MichaelMure/WalletGenerator.net
   -->
 
-  <title>CryptoCashBack-paperwaller - Universal Paper wallet generator for CryptoCashBack and other cryptocurrencies</title>
+  <title>CryptoCashBack-paperwallet - Universal Paper wallet generator for CryptoCashBack and other cryptocurrencies</title>
 
   <script type="text/javascript">
 // Array.prototype.map function is in the public domain.
-// Production steps of ECMA-262, Edition 5, 15.4.4.19
-// Reference: http://es5.github.com/#x15.4.4.19
+// Production steps of ECMA-262, Edition 5, 15.4.4.19  
+// Reference: http://es5.github.com/#x15.4.4.19  
 if (!Array.prototype.map) {
 	Array.prototype.map = function (callback, thisArg) {
 		var T, A, k;
 		if (this == null) {
 			throw new TypeError(" this is null or not defined");
 		}
-		// 1. Let O be the result of calling ToObject passing the |this| value as the argument.
+		// 1. Let O be the result of calling ToObject passing the |this| value as the argument.  
 		var O = Object(this);
-		// 2. Let lenValue be the result of calling the Get internal method of O with the argument "length".
-		// 3. Let len be ToUint32(lenValue).
+		// 2. Let lenValue be the result of calling the Get internal method of O with the argument "length".  
+		// 3. Let len be ToUint32(lenValue).  
 		var len = O.length >>> 0;
-		// 4. If IsCallable(callback) is false, throw a TypeError exception.
-		// See: http://es5.github.com/#x9.11
+		// 4. If IsCallable(callback) is false, throw a TypeError exception.  
+		// See: http://es5.github.com/#x9.11  
 		if ({}.toString.call(callback) != "[object Function]") {
 			throw new TypeError(callback + " is not a function");
 		}
-		// 5. If thisArg was supplied, let T be thisArg; else let T be undefined.
+		// 5. If thisArg was supplied, let T be thisArg; else let T be undefined.  
 		if (thisArg) {
 			T = thisArg;
 		}
-		// 6. Let A be a new array created as if by the expression new Array(len) where Array is
-		// the standard built-in constructor with that name and len is the value of len.
+		// 6. Let A be a new array created as if by the expression new Array(len) where Array is  
+		// the standard built-in constructor with that name and len is the value of len.  
 		A = new Array(len);
-		// 7. Let k be 0
+		// 7. Let k be 0  
 		k = 0;
-		// 8. Repeat, while k < len
+		// 8. Repeat, while k < len  
 		while (k < len) {
 			var kValue, mappedValue;
-			// a. Let Pk be ToString(k).
-			//   This is implicit for LHS operands of the in operator
-			// b. Let kPresent be the result of calling the HasProperty internal method of O with argument Pk.
-			//   This step can be combined with c
-			// c. If kPresent is true, then
+			// a. Let Pk be ToString(k).  
+			//   This is implicit for LHS operands of the in operator  
+			// b. Let kPresent be the result of calling the HasProperty internal method of O with argument Pk.  
+			//   This step can be combined with c  
+			// c. If kPresent is true, then  
 			if (k in O) {
-				// i. Let kValue be the result of calling the Get internal method of O with argument Pk.
+				// i. Let kValue be the result of calling the Get internal method of O with argument Pk.  
 				kValue = O[k];
-				// ii. Let mappedValue be the result of calling the Call internal method of callback
-				// with T as the this value and argument list containing kValue, k, and O.
+				// ii. Let mappedValue be the result of calling the Call internal method of callback  
+				// with T as the this value and argument list containing kValue, k, and O.  
 				mappedValue = callback.call(T, kValue, k, O);
-				// iii. Call the DefineOwnProperty internal method of A with arguments
-				// Pk, Property Descriptor {Value: mappedValue, Writable: true, Enumerable: true, Configurable: true},
-				// and false.
-				// In browsers that support Object.defineProperty, use the following:
-				// Object.defineProperty(A, Pk, { value: mappedValue, writable: true, enumerable: true, configurable: true });
-				// For best browser support, use the following:
+				// iii. Call the DefineOwnProperty internal method of A with arguments  
+				// Pk, Property Descriptor {Value: mappedValue, Writable: true, Enumerable: true, Configurable: true},  
+				// and false.  
+				// In browsers that support Object.defineProperty, use the following:  
+				// Object.defineProperty(A, Pk, { value: mappedValue, writable: true, enumerable: true, configurable: true });  
+				// For best browser support, use the following:  
 				A[k] = mappedValue;
 			}
-			// d. Increase k by 1.
+			// d. Increase k by 1.  
 			k++;
 		}
-		// 9. return A
+		// 9. return A  
 		return A;
 	};
 }
@@ -607,7 +607,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 			// Allow mode to override options
 			if (mode.fixOptions) mode.fixOptions(options);
 
-			var
+			var 
 
 			// Convert to bytes if message is a string
 		m = (
@@ -648,7 +648,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 			// Allow mode to override options
 			if (mode.fixOptions) mode.fixOptions(options);
 
-			var
+			var 
 
 			// Convert to bytes if ciphertext is a string
 		c = (
@@ -1090,9 +1090,9 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 
 	/**
 	* Electronic Code Book mode.
-	*
+	* 
 	* ECB applies the cipher directly against each block of the input.
-	*
+	* 
 	* ECB does not require an initialization vector.
 	*/
 	var ECB = C_mode.ECB = function () {
@@ -1127,7 +1127,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 
 	/**
 	* Cipher block chaining
-	*
+	* 
 	* The first block is XORed with the IV. Subsequent blocks are XOR with the
 	* previous cipher output.
 	*/
@@ -1181,11 +1181,11 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 
 	/**
 	* Cipher feed back
-	*
+	* 
 	* The cipher output is XORed with the plain text to produce the cipher output,
 	* which is then fed back into the cipher to produce a bit pattern to XOR the
 	* next block with.
-	*
+	* 
 	* This is a stream cipher mode and does not require padding.
 	*/
 	var CFB = C_mode.CFB = function () {
@@ -1233,10 +1233,10 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 
 	/**
 	* Output feed back
-	*
+	* 
 	* The cipher repeatedly encrypts its own output. The output is XORed with the
 	* plain text to produce the cipher text.
-	*
+	* 
 	* This is a stream cipher mode and does not require padding.
 	*/
 	var OFB = C_mode.OFB = function () {
@@ -1492,11 +1492,11 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
   <script type="text/javascript">
 /*!
 * Random number generator with ArcFour PRNG
-*
+* 
 * NOTE: For best results, put code like
 * <body onclick='SecureRandom.seedTime();' onkeypress='SecureRandom.seedTime();'>
 * in your main HTML document.
-*
+* 
 * Copyright Tom Wu, bitaddress.org  BSD License.
 * http://www-cs-students.stanford.edu/~tjw/jsbn/LICENSE
 */
@@ -1548,7 +1548,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 			alert("Premature initialisation of the random generator. Something is really wrong, do not generate wallets.");
 			return NaN;
 		}
-
+		
 		if (sr.state == null) {
 			sr.seedTime();
 			sr.state = sr.ArcFour(); // Plug in your RNG constructor here
@@ -2348,11 +2348,12 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 		return ec.secNamedCurves[name]();
 	}
 })();
+
   </script>
   <script type="text/javascript">
 /*!
 * Basic JavaScript BN library - subset useful for RSA encryption. v1.3
-*
+* 
 * Copyright (c) 2005  Tom Wu
 * All Rights Reserved.
 * BSD License
@@ -3633,7 +3634,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 // Licensed under the MIT license:
 //   http://www.opensource.org/licenses/mit-license.php
 //
-// The word "QR Code" is registered trademark of
+// The word "QR Code" is registered trademark of 
 // DENSO WAVE INCORPORATED
 //   http://www.denso-wave.com/qrcode/faqpatent-e.html
 //
@@ -3847,7 +3848,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 			var data = (this.errorCorrectLevel << 3) | maskPattern;
 			var bits = QRCode.Util.getBCHTypeInfo(data);
 
-			// vertical
+			// vertical		
 			for (var i = 0; i < 15; i++) {
 
 				var mod = (!test && ((bits >> i) & 1) == 1);
@@ -4530,7 +4531,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 	[2, 35, 17],
 	[2, 35, 13],
 
-	// 4
+	// 4		
 	[1, 100, 80],
 	[2, 50, 32],
 	[2, 50, 24],
@@ -4548,7 +4549,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 	[4, 43, 19],
 	[4, 43, 15],
 
-	// 7
+	// 7		
 	[2, 98, 78],
 	[4, 49, 31],
 	[2, 32, 14, 4, 33, 15],
@@ -4566,7 +4567,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 	[4, 36, 16, 4, 37, 17],
 	[4, 36, 12, 4, 37, 13],
 
-	// 10
+	// 10		
 	[2, 86, 68, 2, 87, 69],
 	[4, 69, 43, 1, 70, 44],
 	[6, 43, 19, 2, 44, 20],
@@ -4675,6 +4676,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 })(
 	'object' === typeof module ? module.exports : (window.CryptoCashBack = {})
 );
+
   </script>
   <script type="text/javascript">
 //https://raw.github.com/bitcoinjs/bitcoinjs-lib/c952aaeb3ee472e3776655b8ea07299ebed702c7/src/base58.js
@@ -4687,7 +4689,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 		/**
 		* Convert a byte array to a base58-encoded string.
 		*
-		* Written by Mike Hearn for CryptoCashBackJ.
+		* Written by Mike Hearn for BitcoinJ.
 		*   Copyright (c) 2011 Google Inc.
 		*
 		* Ported to JavaScript by Stefan Thomas.
@@ -4716,7 +4718,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 		/**
 		* Convert a base58-encoded string to a byte array.
 		*
-		* Written by Mike Hearn for CryptoCashBackJ.
+		* Written by Mike Hearn for BitcoinJ.
 		*   Copyright (c) 2011 Google Inc.
 		*
 		* Ported to JavaScript by Stefan Thomas.
@@ -4749,6 +4751,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 })(
 	'undefined' != typeof CryptoCashBack ? CryptoCashBack : module.exports
 );
+
   </script>
   <script type="text/javascript">
 //https://raw.github.com/bitcoinjs/bitcoinjs-lib/09e8c6e184d6501a0c2c59d73ca64db5c0d3eb95/src/address.js
@@ -4802,6 +4805,7 @@ CryptoCashBack.Address.decodeString = function (string) {
 
 	return hash;
 };
+
   </script>
   <script type="text/javascript">
 //https://raw.github.com/bitcoinjs/bitcoinjs-lib/e90780d3d3b8fc0d027d2bcb38b80479902f223e/src/ecdsa.js
@@ -5087,6 +5091,7 @@ CryptoCashBack.ECDSA = (function () {
 
 	return ECDSA;
 })();
+
   </script>
   <script type="text/javascript">
 //https://raw.github.com/pointbiz/bitcoinjs-lib/9b2f94a028a7bc9bed94e0722563e9ff1d8e8db8/src/eckey.js
@@ -5355,6 +5360,7 @@ CryptoCashBack.ECKey = (function () {
 
 	return ECKey;
 })();
+
   </script>
   <script type="text/javascript">
 //https://raw.github.com/bitcoinjs/bitcoinjs-lib/09e8c6e184d6501a0c2c59d73ca64db5c0d3eb95/src/util.js
@@ -5462,21 +5468,22 @@ CryptoCashBack.Util = {
 		return Crypto.SHA256(Crypto.SHA256(data, { asBytes: true }), { asBytes: true });
 	}
 };
+
   </script>
   <script type="text/javascript">
 /*
 * Copyright (c) 2010-2011 Intalio Pte, All Rights Reserved
-*
+* 
 * Permission is hereby granted, free of charge, to any person obtaining a copy
 * of this software and associated documentation files (the "Software"), to deal
 * in the Software without restriction, including without limitation the rights
 * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 * copies of the Software, and to permit persons to whom the Software is
 * furnished to do so, subject to the following conditions:
-*
+* 
 * The above copyright notice and this permission notice shall be included in
 * all copies or substantial portions of the Software.
-*
+* 
 * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -5496,7 +5503,7 @@ CryptoCashBack.Util = {
 	* N = Cpu cost
 	* r = Memory cost
 	* p = parallelization cost
-	*
+	* 
 	*/
 	window.Crypto_scrypt = function (passwd, salt, N, r, p, dkLen, callback) {
 		if (N == 0 || (N & (N - 1)) != 0) throw Error("N must be > 0 and a power of 2");
@@ -9671,6 +9678,9 @@ h1 { margin: 0px; height: 91px; }
     </div>
 
     <div class="banner">
+      <div id="coinLogo">
+        <img id="coinLogoImg" src="logos/cryptocashback.png" alt="Universal Open Source Client-Side Wallet Generator" />
+      </div>
       <h1>
         <img id="siteTitle" src="images/banner.png" alt="CryptoCashBack Paper Wallet Generator" />
       </h1>
@@ -9810,7 +9820,7 @@ h1 { margin: 0px; height: 91px; }
           <p class="faqAnswer" id="faqQuestion1.1">
 We think that having a unique generator for multiple currencies lead to a much better reviewed tool for all than having a myriad of half-backed generators.
 Changes made to this generator are available on Github in small and divided commits and those are easy to review and reuse.
-CryptoCashBack-paperwaller use the same security measures as the original project. All-in-one html document, no ajax, no analytics, no external calls, no CDN that can inject anything they want. And trust us, we have seen some nasty things when reviewing some wallet generator.
+CryptoCashBack-paperwallet use the same security measures as the original project. All-in-one html document, no ajax, no analytics, no external calls, no CDN that can inject anything they want. And trust us, we have seen some nasty things when reviewing some wallet generator.
           </p>
 
           <h3 class="faqQuestion"><a class="faqLink" onclick="ninja.toggleFaqQuestion('faqQuestion2');">&#8226; Why should I use a paper wallet ?</a></h3>
@@ -9829,11 +9839,6 @@ CryptoCashBack-paperwaller use the same security measures as the original projec
           <h3 class="faqQuestion"><a class="faqLink" onclick="ninja.toggleFaqQuestion('faqQuestion4');">&#8226; How to spend the coins stored in a paper wallet ?</a></h3>
           <p class="faqAnswer" id="faqQuestion4">
             You will need to import your private key in a real client, that you can download from the currency website. The exact method to do that will depend on the client. If there is no integrated method, you can usually fall back to the debug console and use the command “importprivkey [yourprivatekey]“.
-          </p>
-
-          <h3 class="faqQuestion"><a class="faqLink" onclick="ninja.toggleFaqQuestion('faqQuestion5');">&#8226; How cryptocashback-paperwaller is different than another wallet generator ?</a></h3>
-          <p class="faqAnswer" id="faqQuestion5">
-            It’s not that different. You will find another design for the paper wallet and some improvements here and there. The big difference is that this is a unique project for a lot of currencies, so more people can review it and check its safety.
           </p>
 
         </div>
@@ -10024,92 +10029,13 @@ CryptoCashBack-paperwaller use the same security measures as the original projec
         <span class="item"><a href="https://github.com/CryptoCashBack-Hub/ccbc-paper-wallet" target="_blank" id="footerlabelgithub" class="i18n">Download (GitHub Repository)</a></span>
       </div>
       <div class="copyright">
-        <span id="footerlabelcopyright1">Copyright CryptoCashBack-paperwaller.</span>
+        <span id="footerlabelcopyright1">Copyright CryptoCashBack.</span>
         <span id="footerlabelcopyright2" class="i18n">JavaScript copyrights are included in the source.</span>
         <span id="footerlabelnowarranty" class="i18n">No warranty.</span>
       </div>
     </div>
   </div>
 
-  <script type="text/javascript">
-(function (window) {
-	var muchIndex    = 0;
-	var wowLength    = 0;
-	var manyWords    = null;
-	var suchInterval = null;
-	var muchPlay     = false;
-	var wowElement   = document.createElement('div');
-	var suchColors   = [
-		'#FF0000',
-		'#00FF00',
-		'#0000FF',
-	];
-
-	function veryRandom(val) {
-		return Math.floor((Math.random() * val));
-	}
-
-	function placeWord(word) {
-
-		var muchWidth  = window.innerWidth - 200; //Very random offset
-		var manyHeight = window.innerHeight - 26; //Such fontsize based offset
-
-		wowElement.textContent  = word;
-		wowElement.style.left   = veryRandom(muchWidth) + 'px';
-		wowElement.style.top    = veryRandom(manyHeight) + 'px';
-		wowElement.style.color  = suchColors[veryRandom(suchColors.length)];
-	}
-
-	function muchWords() {
-		muchPlay     = true;
-		suchInterval = setInterval(function () {
-
-			if(muchIndex === wowLength - 1) {
-				muchIndex = 0;
-			} else {
-				muchIndex++;
-			}
-
-			placeWord(manyWords[muchIndex]);
-
-		}, 6000);
-
-	}
-
-	var Doge = function (words) {
-		if (typeof(words) !== 'object' || words.length === undefined) {
-			return console.error('Wow. Words is not array. Much Error.');
-		}
-
-		if (words.length < 1) {
-			return console.error('Much dumb. Very fail. No words in array. Wow');
-		}
-
-		wowLength = words.length;
-		manyWords = words;
-
-        wowElement.className = 'dogeTag';
-		wowElement.style.position   = 'fixed';
-		wowElement.style.fontSize   = '26px';
-		wowElement.style.fontFamily = '"Comic Sans MS"';
-		wowElement.style.zIndex     = 10000001;
-		document.body.appendChild(wowElement);
-		muchWords();
-	};
-
-	Doge.prototype.stop = function () {
-		if (muchPlay) {
-			muchPlay = false;
-			clearInterval(suchInterval);
-		}
-        if(wowElement != null)
-            wowElement.parentNode.removeChild(wowElement);
-	};
-
-	window.Doge = Doge;
-
-}(window));
-  </script>
   <script type="text/javascript">
 var janin = {};
 
@@ -10181,25 +10107,12 @@ janin.currency = {
         // Reset wallet tab when expensive or not applicable
         document.getElementById("bulktextarea").value = "";
         document.getElementById("suppliedPrivateKey").value = "";
-
-        // easter egg doge ;)
-        if(janin.currency.name() == "Dogecoin")
-        {
-            janin.doge = new Doge(['wow', 'so paper wallet', 'such random', 'very pretty', 'much design', 'awesome', 'much crypto', 'such coin', 'wow!!', 'to da moon']);
-            return;
-        }
-
-        if(janin.doge != null)
-        {
-            janin.doge.stop();
-            janin.doge = null;
-        }
     },
 };
 
-janin.currencies = [
+janin.currencies = [    
     //                              name, networkVersion, privateKeyPrefix, WIF_Start, CWIF_Start, donate
-    janin.currency.createCurrency ("CryptoCashBack",           0x3F, 0xD4, "5",    "[LK]" , "SZJxXkgJJJF2oqzF6kkP3c8n7YV4RnA3ag")
+    janin.currency.createCurrency ("CryptoCashBack",           0x3F, 0xD4, "8",    "[LK]" , "SZJxXkgJJJF2oqzF6kkP3c8n7YV4RnA3ag")
                    ];
 
   </script>
@@ -10554,6 +10467,7 @@ ninja.publicKey = {
 		return pubHexUncompressed;
 	}
 };
+
   </script>
   <script type="text/javascript">
 	ninja.seeder = {
@@ -10574,7 +10488,7 @@ ninja.publicKey = {
 		isDone: function() {
 			return ninja.seeder.seedCount >= ninja.seeder.seedLimit;
 		},
-
+		
 		// seed function exists to wait for mouse movement to add more entropy before generating an address
 		seed: function (evt) {
 			if (!evt) var evt = window.event;
@@ -10634,7 +10548,7 @@ ninja.publicKey = {
 			div.setAttribute("class", "seedpoint");
 			div.style.top = y + "px";
 			div.style.left = x + "px";
-
+			
 			// let's make the entropy 'points' grow and change color!
 			percentageComplete = ninja.seeder.seedCount / ninja.seeder.seedLimit;
 			document.getElementById("progress-bar-percentage").style.width=Math.ceil(percentageComplete*100)+"%";
@@ -10703,7 +10617,7 @@ ninja.qrCode = {
 		return canvas;
 	},
 
-	// generate a QRCode and return it's representation as an Html table
+	// generate a QRCode and return it's representation as an Html table 
 	createTableHtml: function (text) {
 		var typeNumber = ninja.qrCode.getTypeNumber(text);
 		var qr = new QRCode(typeNumber, QRCode.ErrorCorrectLevel.H);
@@ -10726,7 +10640,7 @@ ninja.qrCode = {
 	},
 
 	// show QRCodes with canvas OR table (IE8)
-	// parameter: keyValuePair
+	// parameter: keyValuePair 
 	// example: { "id1": "string1", "id2": "string2"}
 	//		"id1" is the id of a div element where you want a QRCode inserted.
 	//		"string1" is the string you want encoded into the QRCode.
@@ -10770,7 +10684,7 @@ ninja.envSecurityCheck = function() {
 			innerHTML = '<span style="color: #009900;">' + ninja.translator.get("securitychecklistofflineOK") + '</span>';
 			break;
 		default:
-	}
+	} 
 	document.getElementById('envSecurityCheck').innerHTML = innerHTML;
 };
 
@@ -10780,7 +10694,7 @@ ninja.browserSecurityCheck = function() {
 		innerHTML = '<span style="color: #009900;">' + ninja.translator.get("securitychecklistrandomOK") + '</span>';
 	} else {
 		innerHTML = '<span style="color: #990000;">' + ninja.translator.get("securitychecklistrandomNOK") + '</span>';
-	}
+	} 
 	document.getElementById('browserSecurityCheck').innerHTML = innerHTML;
 }
 
@@ -10895,7 +10809,7 @@ ninja.translator = {
 
 	translations: {
 		﻿"en": {
-    "defaultTitle" : "CryptoCashBack-paperwaller - Universal Paper wallet generator for CryptoCashBack and other cryptocurrencies",
+    "defaultTitle" : "CryptoCashBack-paperwallet - Universal Paper wallet generator for CryptoCashBack and other cryptocurrencies",
     "title" : "Paper Wallet Generator",
     "bulkgeneratingaddresses": "Generating addresses... ",
     "brainalertpassphrasetooshort": "The passphrase you entered is too short.\n\n",
@@ -10977,7 +10891,7 @@ ninja.translator = {
     "detaillabelq1": "Comment générer un porte-monnaie avec des dés ? Qu'est-ce que la Base6 (B6) ?",
     "detaila1": "Une partie importante de la création d'un porte-monnaie pour les monnaies cryptographiques est de s'assurer que les nombres aléatoires utilisés pour la génération sont réellement aléatoires. L'aléatoire d'origine physique est bien meilleur que le pseudo-aléatoire généré par un ordinateur. La façon la plus facile de générer de l'aléatoire physique est d'utiliser des dés. Pour générer une clé privée, vous avez uniquement besoin d'un dé à 6 faces que vous allez lancer 99 fois. Arrêtez-vous après chaque lancé pour noter la valeur. Pour noter la valeur, suivez les règles suivantes: 1=1, 2=2, 3=3, 4=4, 5=5, 6=0. En faisant ça, vous générez un grand nombre aléatoire, votre clé privée, en Base6 (B6). Vous pouvez ensuite entrer les 99 caractères B6 de votre clé privée dans le champs texte au dessus et cliquer sur \"View Details\". Vous verrez ensuite l'adresse publique associée à cette clé privée. Vous devrez également noter votre clé privée au format WIF, car il est plus courant d'usage que la clé privée brute.",
     "donatetextfooter": "Pour soutenir le développement de ce générateur de porte-monnaie, vous pouvez faire une donation grâce aux adresses suivante. Quand le support pour une monnaie a été ajouté par un contributeur externe au projet, les donations lui parviennent directement.",
-    "footersupport": "Soutenir CryptoCashBack-paperwaller",
+    "footersupport": "Soutenir CryptoCashBack-paperwallet",
     "footerlabelgithub": "Télécharger (dépôt GitHub)",
     "footerlabelcopyright2": "Les licences javascript sont incluses dans le code source.",
     "footerlabelnowarranty": "Aucune garantie.",
@@ -10997,7 +10911,8 @@ ninja.translator = {
     "securitychecklistofflineOK": "Vous exécutez ce générateur depuis votre propre téléchargement.",
     "paperwalletback": "<ul><li>Pour transférer des fonds sur ce porte-monnaie, envoyez des fonds à l'adresse publique, à n'importe quel moment.</li><li>Vérifier votre solde en cherchant l'adresse publique dans un explorateur de Blockchain.</li><li><b>NE REVELEZ PAS VOTRE CLE PRIVEE</b> jusqu'au moment où vous voudrez importer votre solde dans un porte-monnaie logiciel.</li></ul><b>Montant :</b> ___________       <b>Date :</b> ________________<br /><b>Notes :</b> ______________________________________",
 },
-		﻿"de": {
+
+		"de": {
   "choosecurrency": "Kryptowährung Auswahl",
     "singlewallet": "einfache Geldbörse",
     "paperwallet": "Papier Geldbörse",
@@ -11060,11 +10975,11 @@ ninja.translator = {
     "detaillabelq1": "Wie erstelle ich eine zufällige Geldbörse? Was ist Base6 (B6)?",
     "detaila1": "Voraussetzung für die sichere Erstellung eine Cryptowährungs-Geldbörse ist die Verwendung von zufälligen Zeichen, die verwendet werden, um eine sichere Geldbörse zu generieren. Physikalische Zufallsgeneratoren sind in der Regel hochwertiger, wie von Computern berechnete Pseudo-Zufallszahlen. Physikalischer Zufall lässt sich zum Beispiel mit einem Würfel erzeugen. Um einen privaten Schlüssel einer Kryptowährung zu generieren, müssen Sie einen Standardwürfel mit sechs Ziffern 99 Mal werfen. Notieren Sie hierbei jedes Würfelergebnis. Bei der Aufzeichnung verwenden Sie folgende Regel: 1=1, 2=2, 3=3, 4=4, 5=5, 6=0. Dadurch generieren Sie manuell eine lange, zufällige Zahl: Ihren privaten Schlüssel im B6 oder Base6 Format. Sie können anschließend die 99 Zeichen als Base6 privater Schlüssel in das obere Textfeld einfügen und anschließend auf \"Details darstellen\" klicken. Anschließend wird Ihnen die öffentliche Adresse zu Ihrem privaten Schlüssel dargestellt. Notieren Sie bitte Ihren privaten Schlüssel auch im WIF Format, da dieses häufig verwendet wird.",
     "donatetextfooter": "Um die Entwicklung von diesem Kryptogeldbörsen-Generator zu unterstützen, bitten wir Sie um eine Spende an eine der folgenden Adressen. Falls die Unterstützung für eine Kryptowährung von einem externen Programmierer beigetragen wurde, erhält dieser direkt Ihre Spende.",
-    "footersupport": "Unterstützen Sie CryptoCashBack-paperwaller",
+    "footersupport": "Unterstützen Sie CryptoCashBack-paperwallet",
     "footerlabelgithub": "Download (GitHub Depot)",
     "footerlabelcopyright2": "JavaScript Copyright Rechte sind im Quelltext inkludiert.",
     "footerlabelnowarranty": "Nutzung auf eigene Gefahr. Haftungsausschluss für etwaige Schäden.",
-    "defaultTitle": "CryptoCashBack-paperwaller - Universeller Papier Geldbörsen Generator für Kryptowährungen wie CryptoCashBack und andere",
+    "defaultTitle": "CryptoCashBack-paperwallet - Universeller Papier Geldbörsen Generator für Kryptowährungen wie CryptoCashBack und andere",
     "title": "Papier Geldbörse für Kryptowährung",
     "brainalertpassphrasewarning": "Achtung: Die Verwendung einer möglichst langen und sicheren Passwort Phrase ist wichtig, weil anderenfalls Ihr Passwort erraten und damit Ihr Guthaben gestolen werden kann.",
     "brainalertpassphrasetooshort": "Die von Ihnen eingegebene Passwort Phrase ist zu kurz.",
@@ -11080,6 +10995,7 @@ ninja.translator = {
     "securitychecklistofflineOK": "OK: Sie verwenden eine lokale Kopie dieses Programmes zur Erstellung einer Papier Geldbörse für Kryptowährungen.",
     "paperwalletback": "<ul><li>Verwenden Sie Ihre öffentliche Adresse, um Zahlungen auf diese Geldbörse zu überweisen.</li><li>Kontrollieren Sie Ihr Guthaben durch Eingabe Ihrer öffentlichen Adresse mit Hilfe eines Online Blockchain-Explorers. z.B. https://chainz.cryptoid.info</li><li><b>NIEMALS DEN PRIVATEN SCHLÜSSEL PREISGEBEN!</b> Importieren Sie den privaten Schlüssel erst in eine Online-Geldbörse, wenn Sie Ihr Guthaben ausgeben möchten.</li></ul><b>Guthaben:</b> _____________ <b>Datum:</b> ________________<br /><b>Notizen:</b> ______________________________________",
 },
+
 		"nl": {
 	"choosecurrency": "Kies Valuta",
 	"singlewallet": "Enkelvoudige Portomonee",
@@ -11143,11 +11059,11 @@ ninja.translator = {
 	"detaillabelq1": "Hoe maak ik een portomonee aan met een dobbelsteen? Wat is B6?",
     "detaila1": "Een belangrijk onderdeel bij het maken van een cryto-currency portomonee, is om er zeker van te zijn dat de willekeurig gegenereerde nummers die gebruikt zijn om de portomonee te genereren daadwerkelijk willekeurig zijn. Fysieke willekeurigheid is beter dan computer gegenereerde pseudo-willekeurigheid. De meest eenvoudige manier om fysieke willekeurigheid te creëren is met dobbelstenen. Om een crypto-currency private key te genereren heb je alleen een zes zijdige dobbelsteen nodig welke je 99 keer rolt. Waarbij je elke keer stopt om de gerolde waarde te noteren. Bij het noteren de de waardes volg je de volgende regels: 1=1, 2=2, 3=3, 4=4, 5=5, 6=0. Door dit te doen noteer je de grote willekeurige nummer, je prive sleutel, in B6 of base 6 formaat. Je kunt dan vervolgens de 99 karakters base 6 prive sleutel toevoegen in het veld boven en door View Details te klikken. Je zult dan je publiek adres gerelateerd aan je prive sleutel zien. Je zou het beste ook een notitie kunnen maken van je prive sleutels in WIF format, aangezien dit meer gebruikt wordt.",
 	"donatetextfooter": "Om het development van deze wallet te steunen, kun je een donatie maken naar de volgende addressen. Als ondersteuning voor een valuta toe wordt gevoegd door een externe inbrenger, zal hij of zij de donaties zelf ontvangen.",
-	"footersupport": "Steun CryptoCashBack-paperwaller",
+	"footersupport": "Steun CryptoCashBack-paperwallet",
 	"footerlabelgithub": "Download (GitHub Repository)",
 	"footerlabelcopyright2": "JavaScript copyrights zijn toegevoegd in de code.",
 	"footerlabelnowarranty": "Geen garantie.",
-	"defaultTitle": "CryptoCashBack-paperwaller - Universeel Papieren portomonee generator voor CryptoCashBack en andere cyrptocurrencies",
+	"defaultTitle": "CryptoCashBack-paperwallet - Universeel Papieren portomonee generator voor CryptoCashBack en andere cyrptocurrencies",
 	"title": "Papieren Portomonee Generator",
 	"brainalertpassphrasewarning": "Waarschuwing: Het kiezen van een sterk wachtwoordzin is belangrijk om geforceerde inbraak pogingen om je wachtwoordzin te raden en het stelen van je munten te voorkomen.",
 	"brainalertpassphrasetooshort": "De wachtwoordzin die je ingevuld hebt is te kort.",
@@ -11163,6 +11079,7 @@ ninja.translator = {
 	"securitychecklistofflineOK": "Je bent deze generator van je eigen lokale download aan het draaien.",
 	"paperwalletback": "<ul><li>Om fondsen naar deze portomonee over te maken, kun je munten naar dit publiek adres sturen, wanneer je  maar wilt.</li><li>Bevestig je fondsen door een publieke blockchain explorers te kijken in zoals blockchain.info.</li><li><b>LAAT NOOIT JE PRIVE SLEUTEL ZIEN</b> totdat je bereid bent de balans van deze portomonee te importeren in deze client portomonee, een exchange of een online portomonee.</li></ul><b>Hoeveelheid :</b> ___________       <b>Datum :</b> ________________<br /><b>Notities :</b> ______________________________________",
 },
+
 		"pt": {
   "choosecurrency": "Escolha a moeda",
     "singlewallet": "Carteira Única",
@@ -11228,11 +11145,11 @@ ninja.translator = {
     "detaillabelq1": "Como faço uma carteira usando dados? O que é o B6?",
     "detaila1": "Uma parte importante da criação de uma carteira de uma cripto-moeda é garantir que os números usados para criar a carteira são verdadeiramente aleatórios. Aleatoriedade física é melhor que os números pseudo-aleatórios gerados pelo computador. O jeito mais fácil de gerar aleatoriedade física é usando um dado. Para criar uma chave privada de uma cripto-moeda você só precisa de um dado de 6 lados que você joga 99 vezes, parando cada vez para anotar o valor do dado. Quando anotando os valores, siga esse padrão de regras: 1=1, 2=2, 3=3, 4=4, 5=5, 6=0 (apenas substitua o 6 por 0). Fazendo isso você está anotando o grande número aleatório, sua chave privada, no formato Base6 (ou B6). Então você pode inserir a chave privada de 99 caracteres em Base6 na caixa de texto acima e clicar em \"View Details\" (ver detalhes). Então você verá o endereço público associado com sua chave privada. Você também deve anotar sua chave privada no formato WIF pois esse formato é mais geralmente utilizado.",
     "donatetextfooter": "Para apoiar o desenvolvimento desse gerador de carteira, você pode doar para os seguintes endereços. Quando o suporte para uma moeda é adicionada por um colaborador ao projeto, ele recebe as doações diretamente.",
-    "footersupport": "Apoie CryptoCashBack-paperwaller",
+    "footersupport": "Apoie CryptoCashBack-paperwallet",
     "footerlabelgithub": "Download (GitHub Repository)",
     "footerlabelcopyright2": "Avisos de Copyright do JavaScript estão incluídos no código-fonte.",
     "footerlabelnowarranty": "Sem garantias.",
-    "defaultTitle": "CryptoCashBack-paperwaller - Gerador Universal de Carteira de Papel para CryptoCashBack e outras Cripto-moedas.",
+    "defaultTitle": "CryptoCashBack-paperwallet - Gerador Universal de Carteira de Papel para CryptoCashBack e outras Cripto-moedas.",
     "title": "Gerador de Carteira de Papel",
     "brainalertpassphrasewarning": "Aviso: Escolher uma senha forte é importante para evitar ataques de bruteforce para advinhar sua senha e roubar seus fundos.",
     "brainalertpassphrasetooshort": "A senha que você inseriu é pequena de mais.",
@@ -11248,6 +11165,7 @@ ninja.translator = {
     "securitychecklistofflineOK": "Você está usando esse gerador de seu próprio download (offline).",
     "paperwalletback": "<ul><li>Para depositar fundos nessa Carteira de Papel, envie dinheiro para seu endereço público, a qualquer momento.</li><li>Verifique seu saldo pesquisando por seu endereço público usando um explorador de blockchain como o blockchain.info.</li><li><b>NÃO MOSTRE A CHAVE PRIVADA</b> até que você esteja pronto para importar o saldo para um cliente de cripto-moeda, casa de câmbio (exchange) ou carteira online.</li></ul><b>Valor: </b>___________       <b>Data: </b>_______________<br /><b>Notas :</b> ______________________________________",
 },
+
 		"ru": {
 	"choosecurrency": "Выберите валюту",
 	"singlewallet": "Единичный кошелек",
@@ -11311,11 +11229,11 @@ ninja.translator = {
 	"detaillabelq1": "Как мне создать кошелек с помощью игрального кубика? Что такое B6?",
 	"detaila1": "Важная чать в создании кошелька для крипто-валюты заключается в том, чтобы убедиться, что используются действительно случайные числа. Физическая случайность лучше, чем сгенерированные компьютером псевдо-случайные числа. Простейший способ сгенерировать физически случайные числа - игральный кубик. Для создания закрытого ключа нужен лишь 6-гранный кубик, который нужно будет кинуть 99 раз. Записывайте каждое значение, при этом следуйте следующему правилу: 1=1, 2=2, 3=3, 4=4, 5=5, 6=0. Таким образом, Вы получите большое случайное число - Ваш закрытый ключ в формате B6, т.е. в шестиричном формате. Теперь Вы можете ввести 99-тисимвольный закрытый ключ в шестиричном формате в текстовое поле сверху и нажать кнопку \"Посмотреть подробности\". Вы увидите открытый адрес, соответствующий Вашему закрытому ключу. Обратите также внимание на Ваш закрытый ключ в формате WIF, поскольку этот формат является наиболее широко используемым.",
 	"donatetextfooter": "Для поддержки разработчиков этого генератора кошельков используйте следующие адреса. Если поддержка для валюты добавлена внешним разработчиком, он получает Ваши пожертвования напрямую.",
-	"footersupport": "Поддержать CryptoCashBack-paperwaller",
+	"footersupport": "Поддержать CryptoCashBack-paperwallet",
 	"footerlabelgithub": "Скачать (репозиторий на GitHub)",
 	"footerlabelcopyright2": "Копирайты на JavaScript включены в исходники.",
 	"footerlabelnowarranty": "Гарантии не предоставляются.",
-	"defaultTitle": "CryptoCashBack-paperwaller - Универсальный генератор бумажных кошельков для CryptoCashBack и других криптовалют",
+	"defaultTitle": "CryptoCashBack-paperwallet - Универсальный генератор бумажных кошельков для CryptoCashBack и других криптовалют",
 	"title": "Генератор бумажных кошельков",
 	"brainalertpassphrasewarning": "Внимание: Выбор сильной кодовой фразы очень важен для предотвращения взлома путем прямого перебора, совершаемого злоумышленниками с целью похитить Ваши деньги.",
 	"brainalertpassphrasetooshort": "Введенная Вами кодовая слишком короткая.",
@@ -11395,11 +11313,11 @@ ninja.translator = {
     "detaillabelq1": "Cómo puedo crear una cartera usando dados? Qué  es B6?",
     "detaila1": "Una parte importante de la creación de una cartera para una criptomoneda es cerciorarse de que los números aleatorios utilizados para crearla son verdaderamente aleatorios. La aleatoriedad real es mucho mejor que la pseudo-aleatoriedad generada por ordenador. La manera más sencilla de generar aleatoriedad real es usando dados. Para crear una clave privada para una criptomoneda sólo necesitas un dado de 6 caras, que tirarás 99 veces, anotando cada vez el valor del dado. Cuando anotes los valores, sigue estas reglas: 1=1, 2=2, 3=3, 4=4, 5=5, 6=0. Haciéndolo así estarás creando un gran número aleatorio, que será tu clave privada, en formato B6 o base 6. Si introduces tu clave privada de 99 caracteres en base 6 en el cuadro de texto de arriba y haces click en ver detalles, verás la dirección pública asociada a tu clave privada. Deberías anotarte también tu clave privada en formato WIF, porque su uso está más extendido.",
     "donatetextfooter": "Para apoyar el desarrollo de este generador de carteras, puedes hacer donaciones a las siguientes direcciones. Cuando el soporte para una criptodivisa ha sido añadido por un colaborador externo del proyecto, él recibe la donación directamente.",
-    "footersupport": "Ayuda a CryptoCashBack-paperwaller",
+    "footersupport": "Ayuda a CryptoCashBack-paperwallet",
     "footerlabelgithub": "Descargar (Repositorio GitHub)",
     "footerlabelcopyright2": "Los copyrights del JavaScript se incluyen en el código fuente.",
     "footerlabelnowarranty": "Sin garantía.",
-    "defaultTitle": "CryptoCashBack-paperwaller - Generador universal de carteras de papel para CryptoCashBack y otras criptodivisas",
+    "defaultTitle": "CryptoCashBack-paperwallet - Generador universal de carteras de papel para CryptoCashBack y otras criptodivisas",
     "title": "Generador de carteras de papel",
     "brainalertpassphrasewarning": "Atención: Elegir una contraseña robusta es importante para evitar los intentos de adivinarla mediante la fuerza bruta y que te roben tus monedas.",
     "brainalertpassphrasetooshort": "La contraseña introducida es demasiado corta.",
@@ -11492,7 +11410,7 @@ ninja.translator = {
 	"donatetextfooter": "Per sostenere lo sviluppo di questo generatore di portafogli, è possibile effettuare una donazione tramite i seguenti indirizzi. Quando il contributo di una valuta è stato aggiunto da un collaboratore al di fuori del progetto, le donazioni lo raggiungono direttamente. ",
 	"footerlabeldonations": "Donazioni:",
 	"footerlabeltranslatedby": "F3de81",
-	"footersupport": "Supportare CryptoCashBack-paperwaller",
+	"footersupport": "Supportare CryptoCashBack-paperwallet",
 	"footerlabelgithub": "Repository GitHub",
 	"footerlabelversion": "Cronologia Versioni",
 	"footerlabelcopyright1": "Copyright bitaddress.org.",
@@ -11586,11 +11504,11 @@ ninja.translator = {
     "detaillabelq1": "Як я можу створити гаманець за допомогою кубіків? Що таке B6?",
     "detaila1": "При створенні гаманця для криптовалюти, важливо переконатися, що використовуються випадкові числа. Фізична випадковість краща ніж згенеровані комп'ютером псевдо-випадкові числа. Найпростіший шлях згенерувати фізично випадкові числа - це гральний кубік. Щоб створити криптовалютний приватний ключ вам слід кинути шестигранний кубік 99 разів. Занотуйте кожне значення, дотримуючись наступного правила: 1=1, 2=2, 3=3, 4=4, 5=5, 6=0. Таким чином ви одержите довге випадкове число - ваш приватний ключ у форматі B6. Тепер ви можете ввести ці 99 знаків вашого приватного ключа B6 у текстове поле зверху сторінки і клацніть на кнопку \"Показати подробиці\". Ви побачите публічну адресу, яка створена від відповідного приватного ключа. Зверніть увагу на ваш приватний ключ у форматі WIF, бо цей формат є найпоширенішим.",
     "donatetextfooter": "Для пожертв розробникам цього генератора гаманців, використовуйте наступні адреси. Якщо підтримка для валюти додана зовнішнім учасником проекту, він одержує пожертви напряму.",
-    "footersupport": "Підтримати CryptoCashBack-paperwaller",
+    "footersupport": "Підтримати CryptoCashBack-paperwallet",
     "footerlabelgithub": "Завантажити (репозиторій на GitHub)",
     "footerlabelcopyright2": "Авторські права на JavaScript включено у джерела.",
     "footerlabelnowarranty": "Гарантії не надаються.",
-    "defaultTitle": "CryptoCashBack-paperwaller - універсальний генератор паперових гаманців для біткойнів та інших криптовалют",
+    "defaultTitle": "CryptoCashBack-paperwallet - універсальний генератор паперових гаманців для біткойнів та інших криптовалют",
     "title": "Генератор паперових гаманців",
     "brainalertpassphrasewarning": "Увага: Вибір складної парольної фрази вельми важливий щоб запобігти шахраям поцупити ваші гроші.",
     "brainalertpassphrasetooshort": "Парольна фраза, що ви її ввели, є дуже короткою.",
@@ -11608,7 +11526,7 @@ ninja.translator = {
 },
 
 		"tr": {
-    "defaultTitle" : "CryptoCashBack-paperwaller - CryptoCashBack ve diger kripto para birimleri için Evrensel Kagit cüzdan üreticisi",
+    "defaultTitle" : "CryptoCashBack-paperwallet - CryptoCashBack ve diger kripto para birimleri için Evrensel Kagit cüzdan üreticisi",
     "title" : "Kagit Cüzdan Üreticisi",
     "bulkgeneratingaddresses": "Cüzdan Yaratiliyor... ",
     "brainalertpassphrasetooshort": "Girmis oldugunuz parola çok kisa.\n\n",
@@ -11690,11 +11608,11 @@ ninja.translator = {
     "detaillabelq1": "Jak stworzyć portfel używając kości do gry? Czym jest B6?",
     "detaila1": "Istotną kwestią przy tworzeniu portfela do kryptowaluty jest upewnienie się, że losowe liczby, użyte do stworzenia portfela są rzeczywiście losowe. Fizyczne generatory losowości są lepsze, niż generowana komputerowo pseudo-losowość. Najłatwiejszym w użyciu fizycznym generatorem losowości jest kość do gry. Aby stworzyć klucz prywatny kryptowaluty, potrzebujesz jedynie sześciennej kości do gry, którą musisz rzucić 99 razy. Po każdym rzucie, zapisz wyrzuconą wartość. Przy zapisywaniu wartości, kieruj się tymi zasadami: 1=1, 2=2, 3=3, 4=4, 5=5, 6=0. W ten sposób, zapisujesz dużą, losową liczbę – Twój klucz prywatny w formacie B6 lub base 6. Możesz wtedy wpisać 99-znakowy klucz prywatny base 6 w pole powyżej i nacisnąć przycisk View Details. Zobaczysz wtedy adres publiczny, skojarzony z Twoim kluczem prywatnym. Powinieneś również zapisać swój klucz prywatny w formacie WIF, ponieważ jest on szerzej stosowany.",
     "donatetextfooter": "Aby wspomóc rozwój tego generatora portfeli, możesz przekazać darowiznę na następujące adresy. W przypadku, gdy wsparcie dla danej waluty zostało dodane przez zewnętrznego współautora, otrzyma on darowiznę bezpośrednio.",
-    "footersupport": "Wspomóż CryptoCashBack-paperwaller",
+    "footersupport": "Wspomóż CryptoCashBack-paperwallet",
     "footerlabelgithub": "Pobierz (GitHub Repository)",
     "footerlabelcopyright2": "Prawa autorskie JavaScript są umieszczone w źródle",
     "footerlabelnowarranty": "Bez gwarancji.",
-    "defaultTitle": "CryptoCashBack-paperwaller – uniwersalny generator portfeli papierowych dla CryptoCashBacka i innych kryptowalut",
+    "defaultTitle": "CryptoCashBack-paperwallet – uniwersalny generator portfeli papierowych dla CryptoCashBacka i innych kryptowalut",
     "title": "Generator portfeli papierowych",
     "brainalertpassphrasewarning": "Uwaga: użycie mocnego hasła jest istotne, aby zapobiec próbom odgadnięcia hasła poprzez metodę brute force, a co za tym idzie kradzieży Twoich środków.",
     "brainalertpassphrasetooshort": "Hasło, które wpisałeś jest zbyt krótkie.",
@@ -11710,6 +11628,7 @@ ninja.translator = {
     "securitychecklistofflineOK": "Używasz tego generatora w wersji offline.",
     "paperwalletback": "<ul><li> Aby wpłacić dodatkowe fundusze do tego portfela, wyślij cryptocashbacky na publiczny adres.</li><li> Sprawdź dostępne środki szukając publicznego adresu w usługach takich jak blockchain.info.</li><li><b>NIE ODSŁANIAJ KLUCZA PRYWATNEGO</b> dopóki nie jesteś gotowy na wydanie wszystkich środków, znajdujących się w tym portfelu.</li></ul><b>Wpłacona kwota :</b> ___________       <b>Data :</b> ________________<br /><b>Uwagi :</b> ______________________________________",
 },
+
 		"zh": {
   "choosecurrency": "選擇幣別",
     "singlewallet": "一般錢包",
@@ -11771,10 +11690,10 @@ ninja.translator = {
     "detaillabelprivb6": "Base6格式私鑰(99字節，使用 [0-5])：",
     "detaillabelprivbip38": "BIP38格式私鑰(58字節，Base58)：",
     "donatetextfooter": "謝謝您贊助本加密貨幣地址產生器網站，請捐款至以下地址。When the support for a currency has been added by an external contributor to the project, he receives the donation directly.",
-    "footersupport": "贊助CryptoCashBack-paperwaller",
+    "footersupport": "贊助CryptoCashBack-paperwallet",
     "footerlabelgithub": "下載(GitHub Repository)",
     "footerlabelcopyright2": "源代碼中包含JavaScript版權。",
-    "defaultTitle": "CryptoCashBack-paperwaller - 全球通用的比特幣及其他加密貨幣紙錢包產生器",
+    "defaultTitle": "CryptoCashBack-paperwallet - 全球通用的比特幣及其他加密貨幣紙錢包產生器",
     "title": "紙錢包產生器",
     "brainalertpassphrasewarning": "警告：請選擇足夠強大的密碼短語，避免透過暴力破解竊取您的錢。",
     "brainalertpassphrasetooshort": "您輸入的密碼短語不夠長。",
@@ -11787,6 +11706,7 @@ ninja.translator = {
     "securitychecklistofflineOK": "您正使用電腦中下載後的網頁。",
     "paperwalletback": "<ul><li>若您要使用這個紙錢包，您可以隨時的轉入加密貨幣到公鑰地址。</li><li>您可以透過blockchain.info等類似網站輸入公鑰查詢錢包餘額。在您準備將紙錢包餘額匯出或使用前，</li><li><b>絕對不要公開私鑰</b>。</li></ul><b>餘額：</b> ___________       <b>日期：</b> ________________<br /><b>備註：</b> ______________________________________",
 },
+
 	}
 };
 
@@ -11832,6 +11752,7 @@ ninja.wallets.singlewallet = {
 		}
 	}
 };
+
   </script>
   <script type="text/javascript">
 ninja.wallets.paperwallet = {
@@ -12001,6 +11922,7 @@ ninja.wallets.paperwallet = {
 		}
 	}
 };
+
   </script>
   <script type="text/javascript">
 ninja.wallets.bulkwallet = {
@@ -12076,6 +11998,7 @@ ninja.wallets.bulkwallet = {
 		}
 	}
 };
+
   </script>
   <script type="text/javascript">
 ninja.wallets.brainwallet = {
@@ -12142,6 +12065,7 @@ ninja.wallets.brainwallet = {
 		}
 	}
 };
+
   </script>
   <script type="text/javascript">
 ninja.wallets.detailwallet = {
@@ -12330,6 +12254,7 @@ ninja.wallets.detailwallet = {
 		document.getElementById("detailbip38").style.display = "none";
 	}
 };
+
   </script>
   <script type="text/javascript">
 (function (ninja) {
@@ -12926,6 +12851,7 @@ ninja.wallets.detailwallet = {
 		}
 	};
 })(ninja);
+
   </script>
   <script type="text/javascript">
 // change language
