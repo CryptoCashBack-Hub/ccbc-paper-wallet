@@ -1,4 +1,4 @@
-CryptoCashBack﻿"de": {
+"de": {
   "choosecurrency": "Kryptowährung Auswahl",
     "singlewallet": "einfache Geldbörse",
     "paperwallet": "Papier Geldbörse",
